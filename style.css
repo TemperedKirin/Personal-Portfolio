@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;;
+}
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0e23;
+    color: #e0e6f0;
+    line-height: 1.6;
+    margin: 5px;
+    padding: 10px;
+    height: 100%
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    max-width: 60%;
+}
+
+.banner {
+    flex: 1;
+    background: url(img/cyber-hero2.jpg) center center no-repeat;
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    /*Small gradient to the right */
+    mask-image: linear-gradient(to right, transparent 20%, black 40%);
+    -webkit-mask-image: linear-gradient(to right, transparent 20%, black 40%);
+
+}
+
+p {
+    color: #aab4c5;
+}
+
+header {
+    position: sticky;
+    width: 100%;
+    background: rgba(10, 14, 35, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 10px;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    
+}
+
+nav a{
+    color: #e0e6f0;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+nav a:hover {
+    color: #f2a6c2;
+}
+
+.project-card {
+    background-color:#0f142c;
+    border: 1px solid #1c223a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+
+}
+
+.project-card h3 {
+    color: #b6b6e4;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    color: #aab4c5;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: #67d1f6;
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.project-links a:hover {
+    color: #f2a6c2;
+}
+
+section {
+    padding: 5rem 2rem;
+    max-width: 70%;
+    margin: auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #9292dd;
+}
+
+.project-grid {
+    display: grid;
+    gap: 2rem;
+    
+}
+
+.contact-list {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list a {
+  color: #e0e6f0;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+  color: #f2a6c2;
+}
+
+.game-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.game-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.game-item .info {
+    color: #ccd2e0;
+}
+.game-item .info h3{
+    margin: 0;
+    font-size: 1.1rem;
+    color: #67d1f6;
+}
+
+.game-item .info p{
+    margin: 0;
+    font-size: 0.9rem;
+    color: #888fa6;
+
+}
+
+#videogames {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.02),
+        rgba(255, 255, 255, 0)    
+    );
+    padding: 2rem;
+    border-left: 3px solid #b6b6e4;
+    border-radius: 1rem;
+}
