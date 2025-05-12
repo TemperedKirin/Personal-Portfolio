@@ -39,7 +39,7 @@ html {
     min-height: 100vh;
     mask-image: linear-gradient(to right, transparent 20%, black 30%);
     -webkit-mask-image: linear-gradient(to right, transparent 20%, black 30%);
-    background-size: cover; /* Asegúrate de incluir esto */
+    background-size: cover; 
 }
 
 p {
