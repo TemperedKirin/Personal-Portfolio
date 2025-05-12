@@ -189,3 +189,41 @@ h2 {
     border-left: 3px solid #b6b6e4;
     border-radius: 1rem;
 }
+
+#certificates {
+    padding: 4rem 2 rem;
+    max-width: 70%;
+    margin: auto;
+}
+
+.certificate-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.certificate-card {
+    background-color: #0f142c;
+    border: 1px solid #1c223a;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-card img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card img:hover {
+    transform: scale(1.03);
+};
+
+.certificate-card p{
+    margin-top: 0.5rem;
+    color: #aab4c5;
+    font-size: 0.9rem;
+};
