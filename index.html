@@ -30,7 +30,7 @@
                 
                 <section id="about">
                     <h2>About me</h2>
-                    <p>Avid videogamer  and powerlifting enthusiast. I'm starting my journey in front end develpment and some Python programming. This page is my portfolio of sorts</p>
+                    <p>Avid videogamer  and powerlifting enthusiast. I'm starting my journey in front end develpment and some Python programming. This page is my portfolio of sorts.</p>
                 </section>
 
                 <section id="projects">
@@ -60,6 +60,54 @@
 
                     </div>
                 </section>
+
+                <section id="certificates">
+                    <h2>Certificates</h2>
+                    <div class="certificate-grid">
+                        <div class="certificate-card">
+                            
+                                <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/142899099" alt="Codédex HTML Certificate" class="certificate-img"
+                                data-full="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/142899099">    
+                            
+                            <p>
+                                <a href="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/142899099">The Origins I: HTML</a>
+                            </p>
+                        </div>
+                        <!--Add more certificates here-->
+
+                        <div class="certificate-card">
+                            
+                            <img src="certificates/crashcourseonpython.jpg" alt="Crash Course on Python" class="certificate-img"
+                                data-full="certificates/crashcourseonpython.jpg">    
+                            
+                            <p>
+                                <a href="https://coursera.org/share/f08b87eaf0f5fb26ef98774f4bbcd289" target="_blank">Crash Course on Python</a>
+                            </p>
+                        </div>
+
+                        <div class="certificate-card">
+                            
+                            <img src="certificates/p-data-representations.jpg" alt="Python Data Representations" class="certificate-img"
+                                data-full="certificates/p-data-representations.jpg">    
+                            
+                            <p>
+                                <a href="https://coursera.org/share/e7ca9a4e8273f2503421608b48f2b9c9" target="_blank">Python Data Representations</a>
+                            </p>
+                        </div>
+
+                        <div class="certificate-card">
+                            
+                            <img src="certificates/p-programming-essentials.jpg" alt="Python Programming Essentials" class="certificate-img"
+                                data-full="certificates/p-programming-essentials.jpg">    
+                            
+                            <p>
+                                <a href="https://coursera.org/share/d8bfa70b675653f78d84766748e843ec" target="_blank">Python Programming Essentials</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+
                 <!--Videogame section-->
                 <section id="videogames">
                     <h2>Videogames currently playing</h2>
@@ -89,18 +137,6 @@
 
                 </section>
 
-                <section id="certificates">
-                    <h2>Certificates</h2>
-                    <div class="certificate-grid">
-                        <div class="certificate-card">
-                            <a href="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/142899099" target="_blank">
-                                <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/142899099" alt="Codédex HTML Certificate">    
-                            </a>
-                            <p>The Origins I: HTML</p>
-                        </div>
-                        <!--Add more certificates here-->
-                    </div>
-                </section>
 
                 <section id="contact">
                     <h2>Contact</h2>
@@ -135,6 +171,11 @@
 
             <footer>
             </footer>
+
+            <div class="modal" id="imageModal">
+                <span class="modal-close" id="modalClose">&times;</span>
+                <img src="" alt="Expanded Certificate" id="modalImg">
+            </div>
 
             <script src="js/banner-script.js" defer>
 
