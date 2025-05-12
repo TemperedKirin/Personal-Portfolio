@@ -34,14 +34,12 @@ html {
 
 .banner {
     flex: 1;
-    background: url(img/cyber-hero2.jpg) center center no-repeat;
     position: sticky;
     top: 0;
     min-height: 100vh;
-    /*Small gradient to the right */
-    mask-image: linear-gradient(to right, transparent 20%, black 40%);
-    -webkit-mask-image: linear-gradient(to right, transparent 20%, black 40%);
-
+    mask-image: linear-gradient(to right, transparent 20%, black 30%);
+    -webkit-mask-image: linear-gradient(to right, transparent 20%, black 30%);
+    background-size: cover; /* Asegúrate de incluir esto */
 }
 
 p {
