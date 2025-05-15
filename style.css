@@ -9,8 +9,6 @@ body, html {
     background-color: #0a0e23;
     color: #e0e6f0;
     line-height: 1.6;
-    margin: 5px;
-    padding: 10px;
     height: 100%
 }
 
@@ -23,27 +21,36 @@ html {
     min-height: 100vh;
 }
 
-.content {
-    flex: 1;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-    max-width: 60%;
-}
+
 
 .banner {
-    flex: 1;
+    width: 30%;
     position: sticky;
     top: 0;
     min-height: 100vh;
-    mask-image: linear-gradient(to right, transparent 20%, black 30%);
-    -webkit-mask-image: linear-gradient(to right, transparent 20%, black 30%);
     background-size: cover; 
+    background-position: center;
+    transition: opacity 1s ease-out;
+    opacity: 0;
+    mask-image: linear-gradient(to right, transparent 10%, black 40%);
+    -webkit-mask-image: linear-gradient(to right, transparent 10%, black 40%);
+    z-index: 10;
 }
 
 p {
     color: #aab4c5;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 70%;
 }
 
 header {
@@ -163,16 +170,16 @@ h2 {
     border-radius: 0.5rem;
 }
 
-.game-item .info {
+.game-info {
     color: #ccd2e0;
 }
-.game-item .info h3{
+.game-info h3{
     margin: 0;
     font-size: 1.1rem;
     color: #67d1f6;
 }
 
-.game-item .info p{
+.game-info p{
     margin: 0;
     font-size: 0.9rem;
     color: #888fa6;
@@ -191,7 +198,7 @@ h2 {
 }
 
 #certificates {
-    padding: 4rem 2 rem;
+    padding: 4rem 2rem;
     max-width: 70%;
     margin: auto;
 }
@@ -222,11 +229,6 @@ h2 {
     transform: scale(1.03);
 }
 
-.certificate-card p{
-    margin-top: 0.5rem;
-    color: #aab4c5;
-    font-size: 0.9rem;
-}
 
 .certificate-card a{
     text-decoration: none;

@@ -10,15 +10,54 @@ const bannerImages = [
    
 ];
 
-const randomIndex = Math.floor(Math.random() * bannerImages.length);
-const randomImage = bannerImages[randomIndex];
-
-document.getElementById('banner').style.background = `url(${randomImage}) center center no-repeat`;
-
+const banner = document.getElementById('banner');
 const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("modalImg");
 const closeBtn = document.getElementById("modalClose");
 
+
+let currentIndex = 0;
+const slideInterval = 10000;
+
+//image preload
+const preloadImages = (callback) => {
+  let loaded = 0;
+  if (bannerImages.length === 0) callback();
+  
+  bannerImages.forEach(src => {
+    const img = new Image();
+    img.onload = () => {
+      loaded++;
+      if (loaded === bannerImages.length) callback();
+    };
+    img.onerror = () => {
+      loaded++;
+      if (loaded === bannerImages.length) callback();
+    };
+    img.src = src;
+  });
+};
+
+//image transition
+const changeSlide = () => {
+  currentIndex = (currentIndex + 1) % bannerImages.length;
+  banner.style.opacity = 0;
+
+  setTimeout(() => {
+    banner.style.backgroundImage = `url(${bannerImages[currentIndex]})`;
+    banner.style.opacity = 1;
+  }, 1000); 
+};
+
+//Initialize
+preloadImages(() => {
+  banner.style.backgroundImage = `url(${bannerImages[0]})`;
+  banner.style.opacity = 1;
+  setInterval(changeSlide, slideInterval);
+});
+
+
+//Certificate pop up image
 document.querySelectorAll(".certificate-img").forEach((img) => {
   img.addEventListener("click", () => {
     modalImg.src = img.dataset.full;
